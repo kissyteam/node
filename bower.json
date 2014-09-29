@@ -1,0 +1,23 @@
+{
+    "name": "modulex-node",
+    "author": "yiminghe <yiminghe@gmail.com>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/kissyteam/node.git"
+    },
+    "ignore": [
+        "**/*",
+        "!build/**/*",
+        "!lib/**/*",
+        "!meta/**/*",
+        "!index.js"
+    ],
+    "dependencies": {
+        "modulex": "modulex#master",
+        "modulex-dom": "modulex-dom#master",
+        "modulex-anim": "modulex-anim#master",
+        "modulex-util": "modulex-util#master",
+        "modulex-event-dom": "modulex-event-dom#master"
+    }
+}

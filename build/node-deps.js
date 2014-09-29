@@ -1,0 +1,1 @@
+modulex.config("requires",{"node":["util","dom","event-dom","anim"]});
