@@ -1,3 +1,8 @@
+/*
+Copyright 2014, modulex-node@1.0.1
+MIT Licensed
+build time: Thu, 16 Oct 2014 06:52:14 GMT
+*/
 modulex.add("node", ["util","dom","event-dom","anim"], function(require, exports, module) {
 var _util_ = require("util");
 var dom = require("dom");
@@ -548,7 +553,7 @@ nodeAnim = function (exports) {
 }();
 node = function (exports) {
   exports = nodeBase;
-  module.exports.version = '1.0.0';
+  module.exports.version = '1.0.1';
   return exports;
 }();
 module.exports = node;

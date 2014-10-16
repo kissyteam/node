@@ -14,10 +14,10 @@
         "!index.js"
     ],
     "dependencies": {
-        "modulex": "modulex#master",
-        "modulex-dom": "modulex-dom#master",
-        "modulex-anim": "modulex-anim#master",
-        "modulex-util": "modulex-util#master",
-        "modulex-event-dom": "modulex-event-dom#master"
+        "modulex": "*",
+        "modulex-dom": "modulex-dom#1.x",
+        "modulex-anim": "modulex-anim#1.x",
+        "modulex-util": "modulex-util#1.x",
+        "modulex-event-dom": "modulex-event-dom#1.x"
     }
 }
