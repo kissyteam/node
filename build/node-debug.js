@@ -1,7 +1,7 @@
 /*
 Copyright 2014, modulex-node@1.0.1
 MIT Licensed
-build time: Thu, 16 Oct 2014 06:52:14 GMT
+build time: Mon, 20 Oct 2014 04:00:58 GMT
 */
 modulex.add("node", ["util","dom","event-dom","anim"], function(require, exports, module) {
 var _util_ = require("util");
@@ -196,6 +196,7 @@ nodeBase = function (exports) {
       return ret;
     }
   };
+  Node.prototype.find = Node.prototype.all;
   util.mix(Node, {
     /**
      * Get node list from selector or construct new node list from html string.
