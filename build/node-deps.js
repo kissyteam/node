@@ -1,6 +1,2 @@
-/*
-Copyright 2014, modulex-node@1.0.1
-MIT Licensed
-build time: Mon, 20 Oct 2014 04:00:58 GMT
-*/
+//! Copyright 2015, kissy-node@1.0.2 MIT Licensed, build time: Thu, 05 Feb 2015 06:40:18 GMT 
 modulex.config("requires",{"node":["util","dom","event-dom","anim"]});
