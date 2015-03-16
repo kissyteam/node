@@ -449,3 +449,18 @@ NodeList
 
 当前节点列表元素为显示时, 切换显示或隐藏, 且动画效果为滑动展开折叠。
 
+### 其它方法
+
+filter() , test() , clone() , empty() , replaceWith() , hasClass(), addClass(), removeClass(), replaceClass(), toggleClass(), removeAttr(), attr(), hasAttr(), prop(), hasProp(), val(), text(), css(), toggle(), offset(), scrollIntoView(), parent(), index(), next(), prev(), first(), last(), siblings(), children(), contains(), html(), remove(), data(), removeData(), hasData(), unselectable(), contains(), innerWidth(), innerHeight(), outerWidth(), outerHeight(), on(), detach(), fire()
+
+这些方法的调用都会被转发给 dom , event , 原 DOM , Event 对应方法的第一个参数传入一个原生 DOM 节点数组, 而这个原生 DOM 节点数组则是由当前的 NodeList 对象得到的。
+
+Node 模块会对返回值进行处理:
+
+* 如果返回值为单个节点或节点数组, 则包装为 NodeList
+* 如果返回值为 undefined , 则返回调用者 NodeList 对象
+* 其他, 直接返回
+
+#### Note
+
+Node 模块的 on 方法中的 this 关键字指向当前绑定事件的单个原生节点, 事件对象的 target 和 relatedTarget 也指向对应的原生节点。
