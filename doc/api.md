@@ -173,3 +173,37 @@ NodeList
 
 	var node = require('node');
 	node.all('.a').appendTo('.b');
+
+### prepend(content)
+
+将参数内容插入到当前节点列表中的每个元素的开头。
+
+#### 参数：
+
+* content(HTMLElement|string|NodeList)：将要插入的内容。
+
+#### 返回值：
+
+NodeList
+
+#### 使用例子
+
+	var node = require('node');
+	node.all('.a').prepend('<p>test</p>');
+
+### prependTo(containers)
+
+将当前节点列表中的每个元素插入到容器列表的每个元素的开头。
+
+#### 参数：
+
+* containers：<HTMLElement|string|NodeList> 已有或新创建的节点，或选择器字符串
+
+#### 返回值：
+
+NodeList
+
+#### 使用例子
+
+	var node = require('node');
+	node.all('.a').prependTo('.b');
