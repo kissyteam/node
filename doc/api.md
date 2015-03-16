@@ -319,3 +319,42 @@ Boolean
 #### 返回值：
 
 Boolean
+
+### show([ speed, callback ])
+
+当前节点列表元素以动画效果显示。
+
+#### 参数
+
+* speed (number)：单位秒, 动画持续时间, 不设置无动画
+* callback (function)：每个动画结束后回调函数
+
+#### 返回值：
+
+NodeList
+
+### hide([ speed, callback ])
+
+当前节点列表元素以动画效果隐藏。
+
+#### 参数
+
+* speed (number)：单位秒, 动画持续时间, 不设置无动画
+* callback (function)：每个动画结束后回调函数
+
+#### 返回值：
+
+NodeList
+
+### toggle([ speed, callback ])
+
+当前节点列表元素为显示时动画效果隐藏, 否则动画效果显示。
+
+#### 参数
+
+* speed (number)：单位秒, 动画持续时间, 不设置无动画
+* callback (function)：每个动画结束后回调函数
+
+#### 返回值：
+
+NodeList
