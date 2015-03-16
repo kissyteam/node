@@ -260,5 +260,62 @@ NodeList
 	var node = require('node');
 	node.all('.b').after('<p>test</p>');
 
+### animate(props[, duration=1, easing=’easeNone’, callback])
 
+在当前节点列表上开始动画。
 
+#### 参数：
+
+与 Anim 接口同。
+
+#### 返回值：
+
+NodeList
+
+#### 使用例子
+
+	var node = require('node');
+	node.all('div').animate({
+		left: {
+			value: "100px",
+			easing: function () {
+				return 0.5;
+			}
+		},
+		top: {
+			value: "100px",
+			easing: function () {
+				return 0.2;
+			}
+		}
+	}, {
+		duration: 0.3
+	});
+
+### stop([ end, clearQueue, queueName ])
+
+停止当前节点列表的动画, end, clearQueue, queueName。
+
+### pause([ queueName ])
+
+暂停当前节点列表的动画, queueName。
+
+### resume([ queueName ])
+
+继续当前节点列表的动画, queueName。
+
+### isRunning()
+
+判断当前 NodeList 对象是否在动画中, NodeList 中只要有一个 Node 在动画, 就会返回 truthy 值。
+
+#### 返回值：
+
+Boolean
+
+### isPaused()
+
+判断当前 NodeList 对象被暂停动画, NodeList 中只要有一个 Node 被暂停, 就会返回 truthy 值。
+
+#### 返回值：
+
+Boolean
