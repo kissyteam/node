@@ -358,3 +358,53 @@ NodeList
 #### 返回值：
 
 NodeList
+
+### fadeIn([ speed = 1, callback, easing ])
+
+当前节点列表元素以渐隐效果显示。
+
+#### 参数：
+
+* speed (Number)：单位秒, 动画持续时间, 不设置无动画
+* callback (Function)：每个动画结束后回调函数
+* easing (String)：动画平滑函数, 同 Anim
+
+#### 返回值：
+
+NodeList
+
+#### Note：
+
+注意回调 callback 在每个元素动画结束后都会回调, this 值指向当前单个元素所属的动画对象.
+
+### fadeOut([ speed = 1, callback, easing ])
+
+当前节点列表元素以渐隐效果隐藏。
+
+#### 参数：
+
+* speed (Number)：单位秒, 动画持续时间, 不设置无动画
+* callback (Function)：每个动画结束后回调函数
+* easing (String)：动画平滑函数, 同 Anim
+
+#### 返回值：
+
+NodeList
+
+#### Note：
+
+注意回调 callback 在每个元素动画结束后都会回调, this 值指向当前单个元素所属的动画对象.
+
+### fadeToggle([ speed = 1, callback, easing ])
+
+当前节点列表元素为显示时, 切换显示或隐藏, 且动画效果为渐隐。
+
+#### 参数：
+
+* speed (Number)：单位秒, 动画持续时间, 不设置无动画
+* callback (Function)：每个动画结束后回调函数
+* easing (String)：动画平滑函数, 同 Anim
+
+#### 返回值：
+
+NodeList
