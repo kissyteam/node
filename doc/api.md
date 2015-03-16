@@ -207,3 +207,33 @@ NodeList
 
 	var node = require('node');
 	node.all('.a').prependTo('.b');
+
+### insertBefore(target)
+
+将当前列表中的每个元素插入到目标元素之前。
+
+#### 参数：
+
+* target：<HTMLElement|string|NodeList> 已有或新创建的节点，或选择器字符串
+
+#### 使用例子
+
+	var node = require('node');
+	node.all('<p>test</p>').insertBefore('.b');
+
+### before
+
+将参数内容插入到当前列表中每个元素之前。
+
+#### 参数：
+
+* content：<HTMLElement|string|NodeList> 已有或新创建的节点，或选择器字符串
+
+#### 使用例子
+
+	var node = require('node');
+	node.all('.b').before('<p>test</p>');
+
+
+
+
