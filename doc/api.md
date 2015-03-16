@@ -129,7 +129,7 @@ number
 当无参数时，得到当前节点列表第一个节点的计算宽度。
 当有参数时，设置当前列表每个元素的 css width。
 
-#### 返回值
+#### 返回值：
 
 Number
 
@@ -138,4 +138,22 @@ Number
 	var node = require('node');
 	node.all('.a').width()
 	node.all('.b').width(100);
+
+### append(content)
+
+将参数内容插入到当前节点列表中的每个元素的末尾。
+
+#### 参数：
+
+* content (HTMLElement|string|NodeList)：将要插入的内容
+
+### 返回值：
+
+NodeList
+
+#### 使用例子：
+
+	var node = require('node');
+	node.all('.a').append('<p>test</p>');
+	node.all('.a').append(node.all('.b'));
 
