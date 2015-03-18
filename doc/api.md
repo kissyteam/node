@@ -79,8 +79,8 @@ null 或者包含一个原生节点的 NodeList 对象。
 
 #### Parameters:
 
-* start (number)：范围开始位置
-* end (number)：范围结束位置, 忽略的话结束坐标为当前列表末尾
+* start {number}：范围开始位置
+* end {number}：范围结束位置, 忽略的话结束坐标为当前列表末尾
 
 #### Returns:
 
@@ -145,7 +145,7 @@ Number
 
 #### Parameters:
 
-* content (HTMLElement|string|NodeList)：将要插入的内容
+* content {HTMLElement|string|NodeList}：将要插入的内容
 
 ### Returns:
 
@@ -163,7 +163,7 @@ NodeList
 
 #### Parameters:
 
-* containers：<HTMLElement|string|NodeList> 已有或新创建的节点，或选择器字符串
+* containers {HTMLElement|string|NodeList}：已有或新创建的节点，或选择器字符串
 
 #### Returns:
 
@@ -180,7 +180,7 @@ NodeList
 
 #### Parameters:
 
-* content(HTMLElement|string|NodeList)：将要插入的内容。
+* content {HTMLElement|string|NodeList}：将要插入的内容。
 
 #### Returns:
 
@@ -197,7 +197,7 @@ NodeList
 
 #### Parameters:
 
-* containers：<HTMLElement|string|NodeList> 已有或新创建的节点，或选择器字符串
+* containers {HTMLElement|string|NodeList}：已有或新创建的节点，或选择器字符串
 
 #### Returns:
 
@@ -214,7 +214,7 @@ NodeList
 
 #### Parameters:
 
-* target：<HTMLElement|string|NodeList> 已有或新创建的节点，或选择器字符串
+* target {HTMLElement|string|NodeList}：已有或新创建的节点，或选择器字符串
 
 #### Examples:
 
@@ -227,7 +227,7 @@ NodeList
 
 #### Parameters:
 
-* content：<HTMLElement|string|NodeList> 已有或新创建的节点，或选择器字符串
+* content {HTMLElement|string|NodeList}：已有或新创建的节点，或选择器字符串
 
 #### Examples:
 
@@ -240,7 +240,7 @@ NodeList
 
 #### Parameters:
 
-* target：<HTMLElement|string|NodeList> 已有或新创建的节点，或选择器字符串
+* target {HTMLElement|string|NodeList}：已有或新创建的节点，或选择器字符串
 
 #### Examples:
 
@@ -253,7 +253,7 @@ NodeList
 
 #### Parameters:
 
-* content：<HTMLElement|string|NodeList> 已有或新创建的节点，或选择器字符串
+* content {HTMLElement|string|NodeList}：已有或新创建的节点，或选择器字符串
 
 #### Examples:
 
@@ -365,9 +365,9 @@ NodeList
 
 #### Parameters:
 
-* speed (Number)：单位秒, 动画持续时间, 不设置无动画
-* callback (Function)：每个动画结束后回调函数
-* easing (String)：动画平滑函数, 同 Anim
+* speed {Number}：单位秒, 动画持续时间, 不设置无动画
+* callback {Function}：每个动画结束后回调函数
+* easing {String}：动画平滑函数, 同 Anim
 
 #### Returns:
 
@@ -383,9 +383,9 @@ NodeList
 
 #### Parameters:
 
-* speed (Number)：单位秒, 动画持续时间, 不设置无动画
-* callback (Function)：每个动画结束后回调函数
-* easing (String)：动画平滑函数, 同 Anim
+* speed {Number}：单位秒, 动画持续时间, 不设置无动画
+* callback {Function}：每个动画结束后回调函数
+* easing {String}：动画平滑函数, 同 Anim
 
 #### Returns:
 
@@ -401,9 +401,9 @@ NodeList
 
 #### Parameters:
 
-* speed (Number)：单位秒, 动画持续时间, 不设置无动画
-* callback (Function)：每个动画结束后回调函数
-* easing (String)：动画平滑函数, 同 Anim
+* speed {Number}：单位秒, 动画持续时间, 不设置无动画
+* callback {Function}：每个动画结束后回调函数
+* easing {String}：动画平滑函数, 同 Anim
 
 #### Returns:
 
@@ -415,9 +415,9 @@ NodeList
 
 #### Parameters:
 
-* speed (Number)：单位秒, 动画持续时间, 不设置无动画
-* callback (Function)：每个动画结束后回调函数
-* easing (String)：动画平滑函数, 同 Anim
+* speed {Number}：单位秒, 动画持续时间, 不设置无动画
+* callback {Function}：每个动画结束后回调函数
+* easing {String}：动画平滑函数, 同 Anim
 
 #### Returns:
 
@@ -433,9 +433,9 @@ NodeList
 
 #### Parameters:
 
-* speed (Number)：单位秒, 动画持续时间, 不设置无动画
-* callback (Function)：每个动画结束后回调函数
-* easing (String)：动画平滑函数, 同 Anim
+* speed {Number}：单位秒, 动画持续时间, 不设置无动画
+* callback {Function}：每个动画结束后回调函数
+* easing {String}：动画平滑函数, 同 Anim
 
 #### Returns:
 
