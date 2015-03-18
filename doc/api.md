@@ -2,11 +2,11 @@
 
 得到该 NodeList 对象包含的原生节点数组。
 
-#### 返回值：
+#### Returns:
 
 Array<HTMLElement>
 
-#### 使用例子
+#### Examples:
 
 	var node = require('node');
 	var divs = node.all('div').getDOMNodes();
@@ -15,11 +15,11 @@ Array<HTMLElement>
 
 得到该 NodeList 对象包含的第一个原生节点。
 
-#### 返回值：
+#### Returns:
 
 HTMLElement
 
-#### 使用例子
+#### Examples:
 
 	var node = require('node');
 	var firstdiv = node.all('div').getDOMNode(); // => node.all('div').getDOMNodes()[0]
@@ -28,11 +28,11 @@ HTMLElement
 
 比较当前节点列表和 others 代表的节点列表是否完全相同。
 
-#### 返回值：
+#### Returns:
 
 Boolean
 
-#### 使用例子
+#### Examples:
 		
 	var node = require('node');
 	node.all('.a').equals(node.all('.b')) // => true or false
@@ -41,16 +41,16 @@ Boolean
 
 返回包含合并选择器字符串匹配的元素和当前节点列表元素的新 NodeList 对象。
 
-#### 参数：
+#### Parameters:
 
 * slector：选择器
 * context：选择器上下文
 
-#### 返回值：
+#### Returns:
 
 NodeList
 
-#### 使用例子
+#### Examples:
 
 	var node = require('node');
 	var p = node.all('p');
@@ -60,15 +60,15 @@ NodeList
 
 获取包含当前节点列表 index 位置处的单个原生节点的新 NodeList 对象。
 
-#### 参数：
+#### Parameters:
 
 * index：节点索引值。
 
-#### 返回值：
+#### Returns:
 
 null 或者包含一个原生节点的 NodeList 对象。
 
-#### 使用例子
+#### Examples:
 
 	var node = require('node');
 	node.all('div').item(1); // => node.all('div')[1]
@@ -77,16 +77,16 @@ null 或者包含一个原生节点的 NodeList 对象。
 
 获取包含当前节点列表选定范围内原生节点的新 NodeList 对象。
 
-#### 参数：
+#### Parameters:
 
 * start (number)：范围开始位置
 * end (number)：范围结束位置, 忽略的话结束坐标为当前列表末尾
 
-#### 返回值：
+#### Returns:
 
 NodeList
 
-#### 使用例子
+#### Examples:
 
 	var node = require('node');
 	node.all('div').slice(1, 3)
@@ -95,7 +95,7 @@ NodeList
 
 得到当前节点列表第一个节点的滚动条的垂直位置。
 
-#### 使用例子：
+#### Examples:：
 
 	var node = require('node');
 	node.all('.a').scrollTop()
@@ -104,7 +104,7 @@ NodeList
 
 得到当前节点列表第一个节点的滚动条的横向位置。
 
-#### 使用例子：
+#### Examples:：
 
 	var node = require('node');
 	node.all('.a').scrollLeft()
@@ -114,11 +114,11 @@ NodeList
 当无参数时，得到当前节点列表第一个节点的计算高度。
 当有参数时，设置当前列表每个元素的 css height。
 
-#### 返回值：
+#### Returns:
 
 number
 
-#### 使用例子
+#### Examples:
 
 	var node = require('node');
 	node.all('.a').height()
@@ -129,11 +129,11 @@ number
 当无参数时，得到当前节点列表第一个节点的计算宽度。
 当有参数时，设置当前列表每个元素的 css width。
 
-#### 返回值：
+#### Returns:
 
 Number
 
-#### 使用例子
+#### Examples:
 
 	var node = require('node');
 	node.all('.a').width()
@@ -143,15 +143,15 @@ Number
 
 将参数内容插入到当前节点列表中的每个元素的末尾。
 
-#### 参数：
+#### Parameters:
 
 * content (HTMLElement|string|NodeList)：将要插入的内容
 
-### 返回值：
+### Returns:
 
 NodeList
 
-#### 使用例子
+#### Examples:
 
 	var node = require('node');
 	node.all('.a').append('<p>test</p>');
@@ -161,15 +161,15 @@ NodeList
 
 将当前节点列表中的每个元素插入到容器列表的每个元素的最后一个子节点后面。
 
-#### 参数：
+#### Parameters:
 
 * containers：<HTMLElement|string|NodeList> 已有或新创建的节点，或选择器字符串
 
-#### 返回值：
+#### Returns:
 
 NodeList
 
-#### 使用例子
+#### Examples:
 
 	var node = require('node');
 	node.all('.a').appendTo('.b');
@@ -178,15 +178,15 @@ NodeList
 
 将参数内容插入到当前节点列表中的每个元素的开头。
 
-#### 参数：
+#### Parameters:
 
 * content(HTMLElement|string|NodeList)：将要插入的内容。
 
-#### 返回值：
+#### Returns:
 
 NodeList
 
-#### 使用例子
+#### Examples:
 
 	var node = require('node');
 	node.all('.a').prepend('<p>test</p>');
@@ -195,15 +195,15 @@ NodeList
 
 将当前节点列表中的每个元素插入到容器列表的每个元素的开头。
 
-#### 参数：
+#### Parameters:
 
 * containers：<HTMLElement|string|NodeList> 已有或新创建的节点，或选择器字符串
 
-#### 返回值：
+#### Returns:
 
 NodeList
 
-#### 使用例子
+#### Examples:
 
 	var node = require('node');
 	node.all('.a').prependTo('.b');
@@ -212,11 +212,11 @@ NodeList
 
 将当前列表中的每个元素插入到目标元素之前。
 
-#### 参数：
+#### Parameters:
 
 * target：<HTMLElement|string|NodeList> 已有或新创建的节点，或选择器字符串
 
-#### 使用例子
+#### Examples:
 
 	var node = require('node');
 	node.all('<p>test</p>').insertBefore('.b');
@@ -225,11 +225,11 @@ NodeList
 
 将参数内容插入到当前列表中每个元素之前。
 
-#### 参数：
+#### Parameters:
 
 * content：<HTMLElement|string|NodeList> 已有或新创建的节点，或选择器字符串
 
-#### 使用例子
+#### Examples:
 
 	var node = require('node');
 	node.all('.b').before('<p>test</p>');
@@ -238,11 +238,11 @@ NodeList
 
 将当前列表中的每个元素插入到目标元素之后。
 
-#### 参数：
+#### Parameters:
 
 * target：<HTMLElement|string|NodeList> 已有或新创建的节点，或选择器字符串
 
-#### 使用例子
+#### Examples:
 
 	var node = require('node');
 	node.all('<p>test</p>').insertAfter('.b');
@@ -251,11 +251,11 @@ NodeList
 
 将参数内容插入到当前列表中每个元素之后。
 
-#### 参数：
+#### Parameters:
 
 * content：<HTMLElement|string|NodeList> 已有或新创建的节点，或选择器字符串
 
-#### 使用例子
+#### Examples:
 
 	var node = require('node');
 	node.all('.b').after('<p>test</p>');
@@ -264,15 +264,15 @@ NodeList
 
 在当前节点列表上开始动画。
 
-#### 参数：
+#### Parameters:
 
 与 Anim 接口同。
 
-#### 返回值：
+#### Returns:
 
 NodeList
 
-#### 使用例子
+#### Examples:
 
 	var node = require('node');
 	node.all('div').animate({
@@ -308,7 +308,7 @@ NodeList
 
 判断当前 NodeList 对象是否在动画中, NodeList 中只要有一个 Node 在动画, 就会返回 truthy 值。
 
-#### 返回值：
+#### Returns:
 
 Boolean
 
@@ -316,7 +316,7 @@ Boolean
 
 判断当前 NodeList 对象被暂停动画, NodeList 中只要有一个 Node 被暂停, 就会返回 truthy 值。
 
-#### 返回值：
+#### Returns:
 
 Boolean
 
@@ -329,7 +329,7 @@ Boolean
 * speed (number)：单位秒, 动画持续时间, 不设置无动画
 * callback (function)：每个动画结束后回调函数
 
-#### 返回值：
+#### Returns:
 
 NodeList
 
@@ -342,7 +342,7 @@ NodeList
 * speed (number)：单位秒, 动画持续时间, 不设置无动画
 * callback (function)：每个动画结束后回调函数
 
-#### 返回值：
+#### Returns:
 
 NodeList
 
@@ -355,7 +355,7 @@ NodeList
 * speed (number)：单位秒, 动画持续时间, 不设置无动画
 * callback (function)：每个动画结束后回调函数
 
-#### 返回值：
+#### Returns:
 
 NodeList
 
@@ -363,13 +363,13 @@ NodeList
 
 当前节点列表元素以渐隐效果显示。
 
-#### 参数：
+#### Parameters:
 
 * speed (Number)：单位秒, 动画持续时间, 不设置无动画
 * callback (Function)：每个动画结束后回调函数
 * easing (String)：动画平滑函数, 同 Anim
 
-#### 返回值：
+#### Returns:
 
 NodeList
 
@@ -381,13 +381,13 @@ NodeList
 
 当前节点列表元素以渐隐效果隐藏。
 
-#### 参数：
+#### Parameters:
 
 * speed (Number)：单位秒, 动画持续时间, 不设置无动画
 * callback (Function)：每个动画结束后回调函数
 * easing (String)：动画平滑函数, 同 Anim
 
-#### 返回值：
+#### Returns:
 
 NodeList
 
@@ -399,13 +399,13 @@ NodeList
 
 当前节点列表元素为显示时, 切换显示或隐藏, 且动画效果为渐隐。
 
-#### 参数：
+#### Parameters:
 
 * speed (Number)：单位秒, 动画持续时间, 不设置无动画
 * callback (Function)：每个动画结束后回调函数
 * easing (String)：动画平滑函数, 同 Anim
 
-#### 返回值：
+#### Returns:
 
 NodeList
 
@@ -413,13 +413,13 @@ NodeList
 
 当前节点列表元素从上到下滑动显示。
 
-#### 参数：
+#### Parameters:
 
 * speed (Number)：单位秒, 动画持续时间, 不设置无动画
 * callback (Function)：每个动画结束后回调函数
 * easing (String)：动画平滑函数, 同 Anim
 
-#### 返回值：
+#### Returns:
 
 NodeList
 
@@ -431,13 +431,13 @@ NodeList
 
 当前节点列表元素从下到上隐藏。
 
-#### 参数：
+#### Parameters:
 
 * speed (Number)：单位秒, 动画持续时间, 不设置无动画
 * callback (Function)：每个动画结束后回调函数
 * easing (String)：动画平滑函数, 同 Anim
 
-#### 返回值：
+#### Returns:
 
 NodeList
 
