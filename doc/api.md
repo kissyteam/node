@@ -8,8 +8,10 @@ Array<HTMLElement>
 
 #### Examples:
 
+```javascript
 	var node = require('node');
 	var divs = node.all('div').getDOMNodes();
+```
 
 ### getDOMNode()
 
@@ -21,8 +23,10 @@ HTMLElement
 
 #### Examples:
 
+```javascript
 	var node = require('node');
 	var firstdiv = node.all('div').getDOMNode(); // => node.all('div').getDOMNodes()[0]
+```
 
 ### equals()
 
@@ -34,8 +38,10 @@ Boolean
 
 #### Examples:
 		
+```javascript
 	var node = require('node');
 	node.all('.a').equals(node.all('.b')) // => true or false
+```
 
 ### add(selector[, context])
 
@@ -52,9 +58,11 @@ NodeList
 
 #### Examples:
 
+```javascript
 	var node = require('node');
 	var p = node.all('p');
 	var list = p.add('div'); // => node.all('p') 和 node.all('div') 的集合
+```
 
 ### item(index)
 
@@ -70,8 +78,10 @@ null 或者包含一个原生节点的 NodeList 对象。
 
 #### Examples:
 
+```javascript
 	var node = require('node');
 	node.all('div').item(1); // => node.all('div')[1]
+```
 
 ### slice(start [ , end ])
 
@@ -88,8 +98,10 @@ NodeList
 
 #### Examples:
 
+```javascript
 	var node = require('node');
 	node.all('div').slice(1, 3)
+```
 
 ### scrollTop()
 
@@ -97,8 +109,10 @@ NodeList
 
 #### Examples:：
 
+```javascript
 	var node = require('node');
 	node.all('.a').scrollTop()
+```
 
 ### scrollLeft()
 
@@ -106,8 +120,10 @@ NodeList
 
 #### Examples:：
 
+```javascript
 	var node = require('node');
 	node.all('.a').scrollLeft()
+```
 
 ### height(value)
 
@@ -120,9 +136,11 @@ number
 
 #### Examples:
 
+```javascript
 	var node = require('node');
 	node.all('.a').height()
 	node.all('.b').height(100)
+```
 
 ### width(value)
 
@@ -135,9 +153,11 @@ Number
 
 #### Examples:
 
+```javascript
 	var node = require('node');
 	node.all('.a').width()
 	node.all('.b').width(100);
+```
 
 ### append(content)
 
@@ -153,9 +173,11 @@ NodeList
 
 #### Examples:
 
+```javascript
 	var node = require('node');
 	node.all('.a').append('<p>test</p>');
 	node.all('.a').append(node.all('.b'));
+```
 
 ### appendTo(containers)
 
@@ -171,8 +193,10 @@ NodeList
 
 #### Examples:
 
+```javascript
 	var node = require('node');
 	node.all('.a').appendTo('.b');
+```
 
 ### prepend(content)
 
@@ -188,8 +212,10 @@ NodeList
 
 #### Examples:
 
+```javascript
 	var node = require('node');
 	node.all('.a').prepend('<p>test</p>');
+```
 
 ### prependTo(containers)
 
@@ -205,8 +231,10 @@ NodeList
 
 #### Examples:
 
+```javascript
 	var node = require('node');
 	node.all('.a').prependTo('.b');
+```
 
 ### insertBefore(target)
 
@@ -218,8 +246,10 @@ NodeList
 
 #### Examples:
 
+```javascript
 	var node = require('node');
 	node.all('<p>test</p>').insertBefore('.b');
+```
 
 ### before
 
@@ -231,8 +261,10 @@ NodeList
 
 #### Examples:
 
+```javascript
 	var node = require('node');
 	node.all('.b').before('<p>test</p>');
+```
 
 ### insertAfter(target)
 
@@ -244,8 +276,10 @@ NodeList
 
 #### Examples:
 
+```javascript
 	var node = require('node');
 	node.all('<p>test</p>').insertAfter('.b');
+```
 
 ### after
 
@@ -257,8 +291,10 @@ NodeList
 
 #### Examples:
 
+```javascript
 	var node = require('node');
 	node.all('.b').after('<p>test</p>');
+```
 
 ### animate(props[, duration=1, easing=’easeNone’, callback])
 
@@ -274,6 +310,7 @@ NodeList
 
 #### Examples:
 
+```javascript
 	var node = require('node');
 	node.all('div').animate({
 		left: {
@@ -291,6 +328,7 @@ NodeList
 	}, {
 		duration: 0.3
 	});
+```
 
 ### stop([ end, clearQueue, queueName ])
 
