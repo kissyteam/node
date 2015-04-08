@@ -2,8 +2,10 @@ Node 模块提供了对DOM节点的最高层的封装，可以创建、操作、
 
 ### 载入Node模块
 
+```javascript
 	// 载入 Node 模块
 	var node = require('node');
+```
 
 ### 使用Node
 
@@ -11,10 +13,12 @@ Node API 是基于DOM Api 实现的，定义了一系列的语法糖，让用户
 
 ### 查找节点
 
+```javascript
 	var el = node.one('#main');
 
 	// 或者传入一个HtmlElement元素
 	var bodyNode = node.one(document.body);
+```
 
 one()方法类似于jquery的$，通过传入选择器或者Dom实例来获取目标（包装后）的Node节点。如果传入一个css选择器，one()函数将返回第一个匹配的节点。如果要获得节点列表，需要使用all()方法。
 
@@ -26,33 +30,41 @@ KISSY 会根据浏览器平台加载正确的代码，用户不用关心平台�
 
 KISSY Node 节点支持链式调用:
 
+```javascript
 	node.one('#test')
 		.parent('.fathor')
 		.next()
 		.html('<p></p>')
 		.on('click', function() { /* ... */ });
+```
 
 这种风格和jQuery保持一致。创建节点：
 
+```javascript
 	node.all('<div>hello kissy</div>').appendTo('body');
+```
 
 这里的例子涉及查找子节点、父节点，找兄弟节点，修改内容，绑定事件，创建节点。
 
 ### 访问 Node 节点的属性
 
+```javascript
 	var imgNode = node.one('#preview');
 	var bigSrc = imgNode.attr('src');//得到imgNode的src属性
 
 	imgNode.attr('src', 'new.png');// 设置src属性为一个新的值
 	imgNode.next().html('hello world');// 设置imgNode下一个兄弟节点的innerHTML
+```
 
 Node 实例通过attr方法来读写常见的属性。一些className和innerHTML相关的常用操作，被封装为addClass、replaceClass或者html方法。更多用法请参照下文API部分。
 Node 事件操作
 
+```javascript
 	node.one('#demo').on('click', function(e) {
 		e.halt();
 		alert('event: ' + e.type + ' target: ' + e.target.tagName); 
 	});
+```
 
 回调传回一个门面对象e，注意 e 不是原生事件对象，是封装后的，这时e.target是裸的节点。除了preventDefault()和stopPropagation()之外，e还包含halt()方法，停止事件加阻止默认行为。
 
@@ -64,10 +76,12 @@ Node 实例实现了一些快捷方法，用来方便用户更快捷的操作DOM
 
 KISSY 支持标准的ARIA。即 KISSY 可以完整的支持无障碍特性。比如对roles和state的支持。这些特性可以和读屏软件很好的兼容，在增强html标签语义化的同时，让盲人用户使用页面更加顺畅。
 
+```javascript
 	// 写一个属性
 	var el = node.one('#toolbar').attr('role', 'toolbar');
 	// 同时写多个属性
 	el.attr({
 		role: 'menu', 'aria-hidden': true 
 	});
+```
 
